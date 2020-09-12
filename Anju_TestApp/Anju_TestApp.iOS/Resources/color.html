@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width">
+
+    <title>Color Changer</title>
+
+    <style>
+        body {
+            background-color: cornflowerblue;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin-top:100px;
+        }
+
+        .niceButton {
+            background-color: #5cbf2a;
+            border-radius: 10px;
+            border: 1px solid #18ab29;
+            display: inline-block;
+            color: #ffffff;
+            font-size: 19px;
+            padding: 12px 30px;
+        }
+
+            .niceButton:hover {
+                background-color: #35a653;
+            }
+    </style>
+
+    <script>
+        function Button_Clicked() {
+            window.location.href = "ChangeColor";
+        }
+    </script>
+
+</head>
+
+<body>
+    <h2>Click the button to change the label color</h2>
+    
+    <hr />
+
+    <p>
+        <button class="niceButton" onclick="Button_Clicked()">Click Me!</button>
+    </p>
+</body>
+
+</html>

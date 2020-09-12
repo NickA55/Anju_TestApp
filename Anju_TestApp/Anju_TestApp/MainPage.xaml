@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Anju_TestApp.MainPage">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="LabelFontSize" TargetType="Label">
+                <Setter Property="FontSize">
+                    <OnPlatform x:TypeArguments="x:Double">
+                        <On Platform="iOS" Value="15" />
+                        <On Platform="Android, UWP" Value="25" />
+                    </OnPlatform>
+                </Setter>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <Grid ColumnSpacing="0" 
+          RowSpacing="0" 
+          BackgroundColor="DarkSlateGray"
+          ColumnDefinitions="*"
+          RowDefinitions="80*, 20*">
+
+        <WebView Grid.Row="0" x:Name="webViewMain" Navigating="webViewMain_Navigating" />
+
+        <StackLayout Grid.Row="1" BackgroundColor="Gray">
+            <Frame CornerRadius="20" Margin="20,20,20,20" HasShadow="True">
+            
+                <Label x:Name="lblColor" 
+                       Style="{StaticResource LabelFontSize}"
+                       Text="This label will change color" 
+                       HorizontalOptions="CenterAndExpand" 
+                       VerticalOptions="CenterAndExpand" />
+            </Frame>
+        </StackLayout>
+    </Grid>
+</ContentPage>
